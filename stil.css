@@ -1,0 +1,15 @@
+body { font-family: Ubuntu,Arial,sans-serif; }
+input,textarea { border:1px solid black; border-radius: 5px; padding: 5px; font-family: Ubuntu,"Trebuchet MS",sans-serif; font-size: 17px; }
+.detay,.urunac { padding: 10px; width: 60% }
+.urunac { border: 3px solid black; border-radius: 10px; margin-top:15px }
+.detay { display: none; }
+a.urun:link,a.urun:visited,a.urun:hover,a.urun:active { font-weight: bold; color: black; text-decoration: none; }
+#kayitform { width: 50%; } 
+#kayitform input,textarea { float: right; }
+input[type="submit"] { float: left; }
+.bravo, .hata { padding: 10px; color: white; font-weight: bold; width: 45%; }
+.bravo { background: green; }
+.hata { background: red; }
+#kayitform input[type="checkbox"] { float: none }
+.nick { font-size: 32px }
+.fiyat { font-weight: bold; color: green; }
