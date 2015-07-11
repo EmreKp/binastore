@@ -44,6 +44,8 @@ if ($nick!="") {
 <p><input type="submit" value="Kayıt Ol"></p>
 </div>
 </form>
+<script src="jquery-1.11.3.min.js"></script>
+<script src="script.js"></script>
 <?php mysqli_close($bag); ?>
 </body>
 </html>
