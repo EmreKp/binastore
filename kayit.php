@@ -26,6 +26,8 @@ if ($nick!="") {
   else if (mysqli_query($bag,$kayit)) echo "<div class=\"bravo\">Başarıyla kayıt oldunuz. Mağazamıza hoşgeldiniz...</div>\n";
   else echo "<div class=\"hata\">Hata oluştu: ".mysqli_error()."</div>\n";
 }
+$izin="UPDATE kullanici SET adresgoster=1";
+if ($_POST["adresgoster"]) mysqli_query($bag,$izin);
 ?>
 <p>Bir müşterimiz veya satıcımız olmak için aşağıdaki formu doldurun. (Belirtilmediği hallerde boş alanlar zorunludur)</p>
 <form method="post">
