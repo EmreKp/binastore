@@ -4,4 +4,7 @@ $(document).ready(function(){
       $(".detay").eq(index).slideToggle();
     });
   });
+  $("#sart").click(function(){
+    $("#sartlar").slideToggle();
+  });
 });
