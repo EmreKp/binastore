@@ -6,11 +6,12 @@ input,textarea { border:1px solid black; border-radius: 5px; padding: 5px; font-
 a.urun:link,a.urun:visited,a.urun:hover,a.urun:active { font-weight: bold; color: black; text-decoration: none; }
 #kayitform { width: 50%; } 
 #kayitform input,textarea { float: right; }
-input[type="submit"] { float: left; }
+input[type="submit"] { width: 100%; }
 .bravo, .hata { padding: 10px; color: white; font-weight: bold; width: 45%; }
 .bravo { background: green; }
 .hata { background: red; }
 #kayitform input[type="checkbox"] { float: none }
+label { float: left }
 .nick { font-size: 32px }
 .fiyat { font-weight: bold; color: green; }
 #sart:visited { color: black; }
