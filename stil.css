@@ -13,4 +13,5 @@ input[type="submit"] { float: left; }
 #kayitform input[type="checkbox"] { float: none }
 .nick { font-size: 32px }
 .fiyat { font-weight: bold; color: green; }
+#sart:visited { color: black; }
 #sartlar { display: none; border: 2px solid black; padding: 3px; font-family: monospace }
