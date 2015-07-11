@@ -39,7 +39,8 @@ if ($nick!="") {
 <p>Hakkınızda kısa bir tanıtım yazısı: <input type="textarea" name="tanit" placeholder="Bu bölüm isteğe bağlıdır."></p>
 <p>Adresiniz: <textarea name="adres" required></textarea></p>
 <p><input type="checkbox" name="adresizin"> Adresim profilimde görüntülensin. </p>
-<p class="kabul"><input type="checkbox" name="kabul" required> Şartları okudum ve kabul ediyorum.</p>
+<p class="kabul"><input type="checkbox" name="kabul" required> <a href="#" id="sart">Şartlar</a>ı okudum ve kabul ediyorum.</p>
+<p id="sartlar">Kullanım şartları kısmı buraya gelecek. Bu bir formalite anlaşmadır.</p>
 <p><input type="submit" value="Kayıt Ol"></p>
 </div>
 </form>
