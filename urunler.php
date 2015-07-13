@@ -19,7 +19,7 @@ $resim=$_FILES["resim"]["tmp_name"];
 if ($resim!="") { 
   $gonder=2;
   $turu=pathinfo($resim,PATHINFO_EXTENSION);
-  $resmad=md5(basename($_FILES["resim"]["name"])).$turu;
+  $resmad=$_FILES["resim"]["name"];
   $dosya="resim/".$resmad;
   if ($turu!="jpg" || $turu!="gif" || $turu!="png" || $turu!="jpeg" || $turu!="bmp") { 
   echo "<div class=\"hata\">Resminizin türü geçerli değil.</div>"; $gonder=0; }
@@ -27,12 +27,12 @@ if ($resim!="") {
   echo "<div class=\"hata\">Resminiz 2 MB'tan büyük olamaz.</div>"; $gonder=0; }
   else try { move_uploaded_file($resim,$dosya); 
   echo "<div class=\"bravo\">Resminiz eklendi.</div>"; }
-  catch(Exception $e) { echo "<div class=\"hata\">Hata oluştu: ".$e->getMessage(); $gonder=0; }
+  catch(Exception $e) { echo "<div class=\"hata\">Hata oluştu: ".$e->getMessage()."</div>"; $gonder=0; }
 }
 if ($isim!="" && $gonder!=0) {
  $ekle="INSERT INTO urunler (isim, fiyat, detay, satici, resimadi) VALUES ('".$isim."','".$fiyat."','".$detay."','".$satici."','".$resmad."')";
  if (mysqli_query($bag,$ekle)) echo "<div class=\"bravo\">Ürününüz eklendi.</div>";
- else echo "<div class=\"hata\">Hata oluştu: ".mysqli_error();
+ else echo "<div class=\"hata\">Hata oluştu: ".mysqli_error()."</div>";
 } 
 echo "<h1>Ürün Paneli</h1>
 <h2>Ürün Ekleme</h2>
@@ -41,7 +41,7 @@ echo "<h1>Ürün Paneli</h1>
 <p><label>Ürünün Adı:</label> <input type=\"text\" name=\"isim\" required></p>
 <p><label>Fiyat (TL):</label> <input type=\"text\" name=\"fiyat\" required></p>
 <p><label>Açıklama:</label> <textarea name=\"detay\" placeholder=\"Ürününüzle ilgili açıklamalar...\" required></textarea></p>
-<p><label>Resim: </label><input type=\"file\" name=\"resim\" accept=\"image/*\"></p>
+<p><label>Resim (isteğe bağlı): </label><input type=\"file\" name=\"resim\" accept=\"image/*\"></p>
 <p><input type=\"submit\" value=\"Ekle\"></p>
 </div></form>"; }
 else { echo "\n<form action=\"index.php\" method=\"post\">
