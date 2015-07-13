@@ -32,14 +32,14 @@ if ($_POST["adresizin"]) mysqli_query($bag,$izin);
 <p>Bir müşterimiz veya satıcımız olmak için aşağıdaki formu doldurun. (Belirtilmediği hallerde boş alanlar zorunludur)</p>
 <form method="post">
 <div id="kayitform">
-<p>Üye Adı: <input type="text" name="nick" required></p>
-<p>E-posta: <input type="email" name="email" required></p>
-<p>Şifre: <input type="password" name="sifre" required></p>
-<p>Şifreyi tekrar girin: <input type="password" name="sifr2" required></p>
-<hr>
-<p>Tam adınız: <input type="text" name="soyad" placeholder="Soyadınız"> <input type="text" name="ad" placeholder="Adınız"></p>
-<p>Hakkınızda kısa bir tanıtım yazısı: <input type="textarea" name="tanit" placeholder="Bu bölüm isteğe bağlıdır."></p>
-<p>Adresiniz: <textarea name="adres" required></textarea></p>
+<p><label>Üye Adı:</label> <input type="text" name="nick" required></p>
+<p><label>E-posta: <input type="email" name="email" required></p>
+<p><label>Şifre:</label> <input type="password" name="sifre" required></p>
+<p><label>Şifreyi tekrar girin:</label> <input type="password" name="sifr2" required></p>
+<hr style="margin-top: 2em;">
+<p><label>Tam adınız:</label> <input type="text" name="soyad" placeholder="Soyadınız"> <input type="text" name="ad" class="adsoyad" placeholder="Adınız"></p>
+<p><label>Hakkınızda kısa bir tanıtım yazısı:</label> <textarea name="tanit" rows="4" cols="30" placeholder="Bu bölüm isteğe bağlıdır."></textarea></p>
+<p class="adres"><label>Adresiniz:</label> <textarea name="adres" rows="4" cols="30" required></textarea></p>
 <p><input type="checkbox" name="adresizin"> Adresim profilimde görüntülensin. </p>
 <p class="kabul"><input type="checkbox" name="kabul" required> <a href="#" id="sart">Şartlar</a>ı okudum ve kabul ediyorum.</p>
 <p id="sartlar">Kullanım şartları kısmı buraya gelecek. Bu bir formalite anlaşmadır.</p>
