@@ -1,5 +1,4 @@
-<?php $bag=mysqli_connect("localhost","root","1994","magaza");
-if (!$bag) die("Bağlanamadı: ".mysqli_connect_error()); ?>
+<?php include("login.php"); ?>
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8">
@@ -33,7 +32,7 @@ if ($_POST["adresizin"]) mysqli_query($bag,$izin);
 <form method="post">
 <div id="kayitform">
 <p><label>Üye Adı:</label> <input type="text" name="nick" required></p>
-<p><label>E-posta: <input type="email" name="email" required></p>
+<p><label>E-posta:</label> <input type="email" name="email" required></p>
 <p><label>Şifre:</label> <input type="password" name="sifre" required></p>
 <p><label>Şifreyi tekrar girin:</label> <input type="password" name="sifr2" required></p>
 <hr style="margin-top: 2em;">
