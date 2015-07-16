@@ -1,4 +1,15 @@
-<?php include ("login.php"); ?>
+<?php $bag=mysqli_connect("localhost","root","1994","magaza");
+if (!$bag) die("Bağlanamadı: ".mysqli_connect_error());
+session_start();
+$nick=$_POST["nick"]; $sifre=$_POST["sifre"];
+if ($nick!="") {
+ $bak="SELECT * FROM kullanici WHERE nick='".$nick."'";
+ $bk=mysqli_fetch_assoc(mysqli_query($bag,$bak));
+ if ($bk["nick"]!=$nick) echo "<h2>Kullanıcı bulunamadı.</h2>";
+ else if ($bk["sifre"]!=md5($sifre)) echo "<h2>Şifre yanlış</h2>";
+ else $_SESSION["user"]=$nick;
+}
+?>
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8">
@@ -28,7 +39,7 @@ while ($urun=mysqli_fetch_assoc($sonuc)) {
  $satici=mysqli_fetch_assoc(mysqli_query($bag,$satbak));
  echo "<div class=\"urunac\">\n";
  echo "<p style=\"float:right\" class=\"fiyat\">".$urun["fiyat"]." TL &#x25BC;";
- if ($satici["nick"]==$_SESSION["user"]) echo "<a href=\"#\" class=\"duzenle\">Düzenle</a>";
+ if ($satici["nick"]==$_SESSION["user"] && $_SESSION["user"]!="") echo "<a href=\"#\" class=\"duzenle\">Düzenle</a>";
  if ($_SESSION["user"]=="admin") echo "<a style=\"color:red\" href=\"?sil=".$urun["id"]."\">&times;</a></p>\n";
  echo "<p><a href=\"#\" class=\"urun\">".$urun["isim"]."</a></p>\n";
  echo "<div class=\"detay\">\n";

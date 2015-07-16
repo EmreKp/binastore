@@ -45,10 +45,10 @@ CREATE TABLE IF NOT EXISTS `kullanici` (
 --
 
 INSERT INTO `kullanici` (`userid`, `nick`, `sifre`, `email`, `ad`, `soyad`, `kayittarih`, `tanitim`, `adres`, `adresgoster`) VALUES
-(2, 'admin', '008bd5ad93b754d500338c253d9c1770', 'emrekp@outlook.com.', 'Emre', 'Kaplan', '2015-07-13 00:49:17', 'Ben bu sitenin adminiyim.', 'YÄ±ldÄ±z Teknik', 1),
-(7, 'emreokul', 'c1101c86e7b7a604ff93ba4d99017ccf', 'l5212030@std.yildiz.edu.tr', 'Emre', 'Kaplan', '2015-07-13 00:49:17', 'Bu da test hesabÄ±dÄ±r.', 'Bu da test adresi.', 1),
+(2, 'admin', '008bd5ad93b754d500338c253d9c1770', 'emrekp@outlook.com.', 'Emre', 'Kaplan', '2015-07-13 00:49:17', 'Ben bu sitenin adminiyim.', 'Yıldız Teknik', 1),
+(7, 'emreokul', 'c1101c86e7b7a604ff93ba4d99017ccf', 'l5212030@std.yildiz.edu.tr', 'Emre', 'Kaplan', '2015-07-13 00:49:17', 'Bu da test hesabıdır.', 'Bu da test adresi.', 1),
 (10, 'erota', '8562ae5e286544710b2e7ebe9858833b', 'erko@ero.com', 'Lolo', 'Kapo', '2015-07-13 00:49:17', '', 'Bunu da görüntüleyebilirsin.', 1),
-(11, 'emrecom', '008bd5ad93b754d500338c253d9c1770', 'emrekp@outlook.com', 'Emre', 'Kaplan', '2015-07-13 00:49:17', 'Merabalar', 'OsmanaÄŸa', 1),
+(11, 'emrecom', '008bd5ad93b754d500338c253d9c1770', 'emrekp@outlook.com', 'Emre', 'Kaplan', '2015-07-13 00:49:17', 'Merabalar', 'Osmanağa', 1),
 (12, 'emrebey', '9e84a9df16b1ad5a08d25f6e5f8ec5f8', 'l5212030@std.yildiz.edu.tr', 'Emre', 'Kaplan', '2015-07-13 00:49:17', '', 'OsmanaÄŸa Mah.', 1);
 
 -- --------------------------------------------------------
@@ -74,9 +74,9 @@ CREATE TABLE IF NOT EXISTS `urunler` (
 --
 
 INSERT INTO `urunler` (`id`, `isim`, `fiyat`, `detay`, `satici`, `tarih`, `resimadi`, `yayin`) VALUES
-(1, 'Deneme Ã¼rÃ¼nÃ¼', 237, 'Misgibi Ã¼rÃ¼nÃ¼m', 0, '2015-07-08 20:58:21', NULL, 1),
-(2, 'Deneme Ã¼rÃ¼nÃ¼', 237, 'Mis gibi Ã¼rÃ¼n', 2, '2015-07-08 21:00:38', NULL, 1),
-(3, 'Bir Ã¼rÃ¼n var ki', 2105, 'Ã?rÃ¼nÃ¼n detayÄ± bilmemne', 11, '2015-07-09 23:34:28', NULL, 1);
+(1, 'Deneme ürünü', 237, 'Misgibi ürünüm', 0, '2015-07-08 20:58:21', NULL, 1),
+(2, 'Deneme ürünü', 237, 'Mis gibi ürün', 2, '2015-07-08 21:00:38', NULL, 1),
+(3, 'Bir ürün var ki', 2105, 'Ürünün detayı bilmemne', 11, '2015-07-09 23:34:28', NULL, 1);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

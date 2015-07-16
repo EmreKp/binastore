@@ -1,4 +1,5 @@
-<?php include("login.php"); ?>
+<?php $bag=mysqli_connect("localhost","root","1994","magaza");
+if (!$bag) die("Bağlanamadı: ".mysqli_connect_error()); ?>
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8">
