@@ -39,7 +39,7 @@ while ($urun=mysqli_fetch_assoc($sonuc)) {
  $satici=mysqli_fetch_assoc(mysqli_query($bag,$satbak));
  echo "<div class=\"urunac\">\n";
  echo "<p style=\"float:right\" class=\"fiyat\">".$urun["fiyat"]." TL &#x25BC;";
- if ($satici["nick"]==$_SESSION["user"] && $_SESSION["user"]!="") echo "<a href=\"#\" class=\"duzenle\">Düzenle</a>";
+ if ($satici["nick"]==$_SESSION["user"] && $_SESSION["user"]!="") echo "<a href=\"#\" onclick=\"goster(".$urun["id"].")\" class=\"duzenle\">Düzenle</a>";
  if ($_SESSION["user"]=="admin") echo "<a style=\"color:red\" href=\"?sil=".$urun["id"]."\">&times;</a></p>\n";
  echo "<p><a href=\"#\" class=\"urun\">".$urun["isim"]."</a></p>\n";
  echo "<div class=\"detay\">\n";
