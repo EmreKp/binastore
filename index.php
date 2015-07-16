@@ -16,8 +16,8 @@ if ($nick!="") {
 <title>E-Ticaret Mağazası</title>
 <link rel="stylesheet" href="stil.css">
 </head>
-<body><?php 
-if ($_SESSION["user"]!="") echo "\n<div style=\"float:right\"><a href=\"cikis.php\">Çıkış</a></div>\n<div>Merhaba, <b>".$_SESSION["user"]."</b> | <a href=\"profil.php\">Profilim</a> | <a href=\"urunler.php\">Ürünlerim</a></div>\n";
+<body><div id="duzen"></div>
+<?php if ($_SESSION["user"]!="") echo "\n<div style=\"float:right\"><a href=\"cikis.php\">Çıkış</a></div>\n<div>Merhaba, <b>".$_SESSION["user"]."</b> | <a href=\"profil.php\">Profilim</a> | <a href=\"urunler.php\">Ürünlerim</a></div>\n";
 else echo "\n<form method=\"post\">
 <p>Kullanıcı adı: <input type=\"text\" name=\"nick\" required></p>
 <p>Şifre: <input type=\"password\" name=\"sifre\" required></p>
