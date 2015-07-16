@@ -10,7 +10,7 @@ $(document).ready(function(){
 });
 
 function goster(id) {
-    ajax = new XMLHttpRequest();
+    var ajax = new XMLHttpRequest();
     ajax.onreadystatechange = function () {
         if (ajax.readyState == 4 && ajax.status == 200) {
             document.getElementById("duzen").innerHTML = ajax.responseText;
