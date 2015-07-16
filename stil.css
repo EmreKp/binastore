@@ -21,3 +21,4 @@ input[type="file"] { margin-top: 3px }
 textarea { font-size: 15px; float: right; }
 .adres { clear: both } .adres textarea { margin-top: 2px }
 .kabul { text-align: center; margin-top: 2em !important;  }
+#duzen { position: fixed; right: 0; top: 20%; }
